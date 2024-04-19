@@ -1,9 +1,12 @@
 function TodoRowItem() {
+    const rowNumber = 1;
+    const rowDescription = 'Code Review';
+    const rowAssigned = 'Pika';
     return (
         <tr>
-            <th scope='row'>1</th>
-            <td>Code Review</td>
-            <td>Pika</td>
+            <th scope='row'>{rowNumber}</th>
+            <td>{rowDescription}</td>
+            <td>{rowAssigned}</td>
         </tr>
     )
 }
