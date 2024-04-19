@@ -13,6 +13,9 @@ function App() {
     },
     {
       rowNumber: 3, rowDescription: 'Unit Testing', rowAssigned: 'Chuu'
+    },
+    {
+      rowNumber: 4, rowDescription: 'System Analysis', rowAssigned: 'Pika'
     }
   ]
   return (
