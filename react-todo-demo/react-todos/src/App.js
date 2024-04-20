@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 
 import TodoTable from './components/TodoTable';
 
 function App() {
-  const todos = [
-    {
-      rowNumber: 1, rowDescription: 'Code Review', rowAssigned: 'Pika'
-    },
-    {
-      rowNumber: 2, rowDescription: 'Develop Frontend', rowAssigned: 'Chuu'
-    },
-    {
-      rowNumber: 3, rowDescription: 'Unit Testing', rowAssigned: 'Chuu'
-    },
-    {
-      rowNumber: 4, rowDescription: 'System Analysis', rowAssigned: 'Pika'
-    }
-  ]
+  const [todos, setTodos] = useState(
+    [
+      {
+        rowNumber: 1, rowDescription: 'Code Review', rowAssigned: 'Pika'
+      },
+      {
+        rowNumber: 2, rowDescription: 'Develop Frontend', rowAssigned: 'Chuu'
+      },
+      {
+        rowNumber: 3, rowDescription: 'Unit Testing', rowAssigned: 'Chuu'
+      },
+      {
+        rowNumber: 4, rowDescription: 'System Analysis', rowAssigned: 'Pika'
+      }
+    ]
+  )
   const addTodo = () => {
     if (todos.length > 0) {
       const newTodo = {
@@ -25,7 +27,7 @@ function App() {
         rowDescription: 'New Todo',
         rowAssigned: 'User Three'
       }
-      todos.push(newTodo);
+      setTodos(todos => [...todos, newTodo])
       console.log(todos);
     }
   }
